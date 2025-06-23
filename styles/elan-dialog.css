@@ -1,0 +1,43 @@
+.tier-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.list-headings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.text-heading{
+    flex-grow: 2;
+}
+
+.option-heading{
+    min-width: 100px;
+    width: 15vw;
+    text-align: center;
+}
+
+.tier{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    margin-bottom: 5px;
+}
+
+.tier-option{
+    min-width: 100px;
+    width: 15vw;
+    margin: 0%;
+}
+
+.tier-name{
+    flex-grow: 1;
+}

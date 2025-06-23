@@ -1,0 +1,24 @@
+{
+  "name": "langdoc",
+  "version": "1.0.0",
+  "description": "Language Documentation Management App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "electron": "^34.3.0"
+  },
+  "dependencies": {
+    "@soundcut/decode-audio-data-fast": "^2.0.1",
+    "audio-decode": "^2.2.2",
+    "csv": "^6.3.11",
+    "electron-context-menu": "^4.0.5",
+    "jszip": "^3.10.1",
+    "leaflet": "^1.9.4",
+    "workerpool": "^9.3.2",
+    "xml-js": "^1.6.11"
+  }
+}

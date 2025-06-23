@@ -1,0 +1,80 @@
+.setting-group{
+    display: flex;
+    padding: 0.5vh;
+    border-bottom: 1px solid black;
+}
+.setting-group label{
+    width: 20vw;
+    border-right: 1px solid black;
+}
+
+.setting-group input{
+    width: 20vw;
+    border: none;
+    border-radius: 0;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    background-color: #f0f0f0;
+}
+
+.setting-section{
+    display: flex;
+    flex-direction: column;
+    min-width: 20vw;
+}
+
+#settings-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.glottocode-list-wrapper{
+    display: flex;
+    margin-left: 1vw;
+}
+
+#map {
+    height: 20vh;
+    width: 20vw;
+justify-self: flex-end;
+}
+
+#open-glottolog{
+    font-size: small;
+    background-color: white;
+    border:none;
+    cursor: pointer;
+}
+
+#variety-editor{
+    display: flex;
+    flex-direction: column;
+    display: none;
+
+}
+.language-variety-name{
+    min-width: 10vw;
+    background-color: #f0f0f0;
+    width: fit-content;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.language-variety-short-name{
+    min-width: 5vw;
+    background-color: #f0f0f0;
+    margin-right: 5vw;
+    border-left: 1px solid black;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+[contenteditable] {
+    outline: 0px solid transparent;
+  }
+
+.language-variety-item{
+    display: flex;
+    justify-content: start;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}

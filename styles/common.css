@@ -1,0 +1,121 @@
+@font-face {
+
+    font-family: "Noto Sans"; /* Your desired font name */
+
+    src: url("../fonts/NotoSans-VariableFont_wdth,wght.ttf") format("truetype"); /* Path to your TTF file */
+
+}
+
+@font-face {
+    font-family: 'Icon';
+    src: url('../fonts/icons.ttf') format('truetype');
+}
+body{
+    font-family: 'Noto Sans';
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#app{
+    display: flex;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #888;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    position: relative;
+    left: 50%;
+    top:50%
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+.icon{
+    font-family: 'Icon';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+.notification{
+    opacity: 1;
+    transition: opacity 1s linear;
+    color: #888;
+    font-family: 'Noto Sans';
+    font-size: small;
+}
+
+.notification.fading{
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+.show{
+    display: block !important;
+}
+
+.small-caps{
+    font-variant: small-caps;
+}
+
+.clear{
+    pointer-events: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.error{
+    color: red;
+    font-size: small;
+}
+
+.media{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 200px;
+    width: fit-content;
+    cursor: grab;
+    background-color: white;
+    display:none;
+}
+
+.media:active{
+    cursor: grabbing;
+    box-shadow: 6px 6px 20px 0px #333333;
+}
+
+#progress{
+    display: none;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    padding: 1%;
+    border: 0.5px solid black;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+}

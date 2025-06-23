@@ -1,0 +1,197 @@
+#dictionary-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+}
+
+.dictionary-form {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.dictionary-gloss {
+    color: #666;
+    text-align: right;
+}
+
+.dictionary-pos {
+    text-transform: uppercase;
+    color: #999;
+}
+
+.dictionary-item{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding:0.2vw;
+    border: 1px black solid;
+    margin-bottom: 0.5vh;
+    margin-right: 1vw;
+}
+
+#dictionary-list{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    flex-grow: 1;
+}
+
+#dictionary {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-grow: 1;
+    height: 100vh;
+    padding-right: 0.5vw;
+    resize: horizontal;
+}
+
+#edit-box{
+    display: flex;
+    flex-direction: column;
+    /* height: 30%; */
+    overflow-y: scroll;
+    max-height: 30vh;
+    padding-bottom: 5%;
+}
+
+.edit-wrapper {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1vh;
+}
+
+.exit{
+    cursor:pointer;
+    font-family: sans-serif;
+    border: 1px solid black;
+    padding: 1%;
+    margin: 1%;
+
+}
+
+textarea{
+    font-family: "Noto Sans";
+}
+
+.edit-wrapper input,textarea{
+    font-size: large;
+    width: 55%;
+}
+
+#edit-form{
+    font-style: italic;
+}
+
+#dictionary-resize{
+    cursor: col-resize;
+    width: 2px;
+    margin-right: 3px;
+    margin-left: 3px;
+    height: 100vh;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+}
+
+#edit-resize{
+    cursor: row-resize;
+    height: 2px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+}
+#dictionary-search-add{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1vh;
+}
+#dictionary-search-add input{
+    flex-shrink: 2;
+    width: 40%;
+    padding: 0.5vw;
+    font-family: 'Noto Sans';
+}
+#dictionary-search-add button{
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+.allomorph-editor-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+}
+
+.show-allomorphs{
+    width: fit-content;
+    margin: 0.3vw;
+}
+
+.allomorphs-box{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    height: 0px;
+    overflow-y: hidden;
+    transition:all 0.5s ease-in-out;
+}
+
+.allomorph-open{
+    height: fit-content;
+    transition: height 0.5s ease-in-out;
+    border-top: 1px solid black;
+    padding-top: 5%
+}
+
+.allomorph-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1vh;
+    width: 100%;
+}
+
+.allomorph-wrapper input{
+    flex-grow: 1;
+    margin-left: 1vw;
+    font-style: italic;
+}
+
+.variety-tab-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.variety-tab{
+    cursor: pointer;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    border-top-left-radius: 0.5vw;
+    border-top-right-radius: 0.5vw;
+    background-color: #fff;
+}
+
+.variety-tab-container{
+    padding:1%;
+    background-color: #f0f0f0;    
+}
+
+.variety-box{
+    display: none;
+}
+
+.active-variety-box{
+    display: inline;
+}
+
+.active-variety-tab{
+    background-color: #f0f0f0;
+}

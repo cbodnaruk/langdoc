@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <script type="module" src="scripts/components.mjs"></script>
+    <script type="module" src="scripts/classes.mjs"></script>
+    <script type="module" src="scripts/resize.mjs"></script>
+    <script type="module" src="scripts/dictionary.mjs"></script>
+    <script type="module" src="scripts/text.mjs"></script>
+    <script type="module" src="scripts/glossEditor.mjs"></script>
+    <script type="module" src="scripts/core.mjs"></script>
+    <script type="module" src="scripts/media.mjs"></script>
+    <script type="module" src="scripts/ui.js"></script>
+    <script src="scripts/dev.js"></script>
+
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/dictionary.css">
+    <link rel="stylesheet" href="styles/text.css">
+    <title>LingBook</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="dictionary-wrapper">
+            <div id="dictionary">
+                <h3>Lexicon</h3>
+                <div id="dictionary-search-add">
+                    <input id="dictionary-form-search" type="text" placeholder="Search forms..." class="search-box"/>
+                    <button id="dictionary-add">Add</button>
+                    <input id="dictionary-gloss-search" type="text" placeholder="Search glosses..." class="search-box"/>
+                </div>
+                <div id="dictionary-filters"></div>
+                
+            </div>
+            <div id="dictionary-resize" class="resize rx"></div>
+        </div>
+        <div id="text-wrapper">
+            <div id="text-editor"></div>
+            <div id="text-manager-wrapper">
+                <div id="text-manager-resize" class="resize rx neg"></div>
+                <div id="text-manager"><h3>Select Text to Edit</h2></div>
+            </div>
+        </div>
+    </div>
+    <div class="media" id="video-wrapper"></div>
+    <div id="progress"></div>
+</body>
+
+</html>

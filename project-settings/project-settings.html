@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; img-src 'self' https://tile.openstreetmap.org/" />
+        <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'; img-src 'self' " />
+        <title>Project Settings</title>
+        <link rel="stylesheet" href="../styles/common.css">
+        <link rel="stylesheet" href="../styles/project-settings.css">
+        <link rel="stylesheet" href="../node_modules/leaflet/dist/leaflet.css">
+
+        <script src="../node_modules/leaflet/dist/leaflet-src.esm.js" type="module"></script>
+        
+    </head>
+    <body>
+        <h1>Project Settings</h1>
+        <div id="settings-container">
+            <div class="setting-section">
+                <h2>Language Information
+                    <button id="open-glottolog" class="icon">open_in_new</button></h2>
+                <div class="setting-group" id="language-name-group">
+                    <label for="language-name">Language Name:</label>
+                    <input type="text" id="language-name" />
+                    <button id="language-name-search">Search</button>
+                </div>
+                <div class="setting-group">
+                    <label for="language-code">Glottocode:</label>
+                    <input type="text" id="language-code" />
+
+                    <button id="language-code-search">Search</button>
+                </div>
+            </div>
+            <div class="setting-section">
+                <div id="map"></div>
+            </div>
+            <div class="setting-section">
+                <h2>Project Preferences</h2>
+                <div class="setting-group" id="enable-varieties-group">
+                    <label for="enable-varieties">Enable Varieties:</label>
+                    <input type="checkbox" id="enable-varieties" />
+                </div>
+                <div class="setting-group" id="variety-editor">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="save-settings"><button id="save-button">Save & Close</button></div>
+        <script type="module" src="project-settings.mjs"></script>
+        <script type="module" src="project-settings-components.mjs"></script>
+    </body>
+</html>
+
