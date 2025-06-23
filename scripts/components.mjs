@@ -1,48 +1,13 @@
 import { Word, getElementIndex, Variation } from "./classes.mjs"
 import { openText } from "./text.mjs"
 import { glossFill } from "./glossEditor.mjs"
-import * as UI from "./ui.js"
 
 export const DictionaryList = (dict) => {
     const list = document.createElement('div')
     list.id = 'dictionary-list'
 
-    const list1 = UI.create({
-        type: 'div',
-        id: 'dictionary-list'
-    })
-
     let items = []
-    let items1 = []
     for (let m of dict) {
-
-        const item1 = UI.create({
-            type: 'div',
-            id: `morph-${m.id}`,
-            classList: 'dictionary-item'
-        })
-
-        const form1 = UI.create({
-            type: 'div',
-            id: `form-${m.id}`,
-            classList: 'dictionary-form'
-        })
-
-        const pos1 = UI.create({
-            type: 'span',
-            id: `pos-${m.id}`,
-            classList: 'dictionary-pos'
-        })
-
-        const gloss1 = UI.create({
-            type: 'span',
-            id: `gloss-${m.id}`,
-            classList: (!m.lexical) ? 'dictionary-gloss small-caps':'dictionary-gloss',
-            text: (m.lexical) ? `'${m.gloss}'` : m.gloss
-        })
-        item1.add(form1,pos1,gloss1).attribute['morph-id'] = m.id
-
-        items1.push(item1)
 
         const item = document.createElement('div')
         item.classList.add('dictionary-item')
@@ -65,8 +30,6 @@ export const DictionaryList = (dict) => {
         item.setAttribute('morph-id', m.id)
         items.push(item)
     }
-
-    list1.add(items1)
     list.append(...items)
     return list
 }
